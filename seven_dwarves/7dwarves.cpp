@@ -23,8 +23,8 @@ void findCombinations(vector<int>& num, vector<int>& combination, int i, int k,v
 }
 
 int main(){
-    int n = 4;
-    int k = 2;
+    int n = 9;
+    int k = 7;
     vector<int> num;
     vector<int> combination;
     vector<vector<int>> result;
