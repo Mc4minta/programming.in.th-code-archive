@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void findCombinations(vector<int>& num, vector<int>& combination, int i, int k,vector<vector<int>> result){
+void findCombinations(vector<int>& num, vector<int>& combination, int i, int k,vector<vector<int>>& result){
 
     if(k==0){
         result.push_back(combination);
@@ -18,14 +18,13 @@ void findCombinations(vector<int>& num, vector<int>& combination, int i, int k,v
     findCombinations(num, combination, i+1, k-1, result);
 
     combination.pop_back();
-    findCombinations(num,combination,i+1,k-1, result);
+    findCombinations(num,combination,i+1,k, result);
 
 }
 
-
 int main(){
-    int n = 9;
-    int k = 7;
+    int n = 4;
+    int k = 2;
     vector<int> num;
     vector<int> combination;
     vector<vector<int>> result;
@@ -35,5 +34,18 @@ int main(){
        cin >> input; 
        num.push_back(input);
     }
+
+    findCombinations(num,combination,0,k,result);
+
+    for( const vector<int>& comb : result){
+        for (int x : comb){
+            cout << x << " ";
+        }
+            cout << endl;
+    }
+    
+    
+    
+
     return 0;
 }
