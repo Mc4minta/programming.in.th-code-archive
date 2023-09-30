@@ -22,8 +22,6 @@ void findCombinations(vector<int>& num, vector<int>& combination, int i, int k,v
 
 }
 
-// uwuwuwuw
-
 
 int main(){
     int n = 9;
