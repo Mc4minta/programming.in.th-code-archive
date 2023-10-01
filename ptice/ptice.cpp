@@ -57,7 +57,8 @@ int main(){
     // make goran
     // Goran = C C A A B B loop
     counter = 1;
-    for (int i = 0; i < n/2; i++){
+    if (n%2 == 0){
+        for (int i = 0; i < n/2; i++){
         if (counter == 1){
             myChar = 'C';
         }else if (counter == 2){
@@ -69,7 +70,34 @@ int main(){
         goran.push_back(myChar);
         goran.push_back(myChar);
         counter++;
+        }
+    }else {
+        for (int i = 0; i < n/2; i++){
+        if (counter == 1){
+            myChar = 'C';
+        }else if (counter == 2){
+            myChar = 'A';
+        }else if (counter == 3){
+            myChar = 'B';
+            counter = 0;
+        }
+        goran.push_back(myChar);
+        goran.push_back(myChar);
+        counter++;
+        }
     }
+    if (counter == 1){
+            myChar = 'C';
+        }else if (counter == 2){
+            myChar = 'A';
+        }else if (counter == 3){
+            myChar = 'B';
+            counter = 0;
+        }
+        goran.push_back(myChar);
+
+    
+    
     // check who have the most point
     int score;
 
@@ -117,7 +145,7 @@ int main(){
         winners.push_back("Goran");
     }
     
-    cout << "Key is: " << key << endl;
+/*    cout << "Key is: " << key << endl;
     cout << "Key size is: " << n << endl;
     cout << endl;
     cout << "Adrain is: " << adrian << endl;
@@ -133,7 +161,13 @@ int main(){
     cout << "Winners is/are: " << endl;
     for (int i = 0; i < winners.size(); i++){
         cout << winners[i] << endl;
-    }
+    }   
+*/
+
+    cout << maxScore << endl;
+    for (int i = 0; i < winners.size(); i++){
+        cout << winners[i] << endl;
+    }   
     
     
 
