@@ -129,8 +129,6 @@ int main(){
     cout << "Bruno score is: " << brunoScore << endl;
     cout << "Goran score is: " << goranScore << endl;
     cout << endl;
-    cout << "Most score is: " << max << endl;
-    cout << "The person that score the most is: " << mostScore << endl;
-    
+
     return 0;
 }
