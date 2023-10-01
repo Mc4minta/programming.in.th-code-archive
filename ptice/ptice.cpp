@@ -100,21 +100,25 @@ int main(){
     int goranScore = score;
 
 //check who have the most score
-    vector<string> winners;
 
-    if ()
-    {
-        /* code */
+    int scoreArray[3] = {adrainScore,brunoScore,goranScore};
+    int max = scoreArray[0];
+    for (int i = 0; i < 3; i++){
+        if (scoreArray[i] > max){
+            max = scoreArray[i];
+        }
     }
     
-
-
-
-
-
-
-
-
+    
+    vector<string> winners;
+    if (max == adrainScore){
+        winners.push_back("Adrian");
+    }else if (max == brunoScore){
+        winners.push_back("Bruno");
+    }else if (max == goranScore){
+        winners.push_back("Goran");
+    }
+    
     cout << "Key is: " << key << endl;
     cout << "Key size is: " << n << endl;
     cout << endl;
@@ -126,6 +130,13 @@ int main(){
     cout << "Bruno score is: " << brunoScore << endl;
     cout << "Goran score is: " << goranScore << endl;
     cout << endl;
+    cout << "Max score is: " << max << endl;
+    cout << "winner size is: " << winners.size() << endl;
+    cout << "Winners is/are: " << endl;
+    for (int i = 0; i < winners.size(); i++){
+        cout << winners[i] << endl;
+    }
+    
 
     return 0;
 }
