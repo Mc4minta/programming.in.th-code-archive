@@ -100,7 +100,20 @@ int main(){
     int goranScore = score;
 
 //check who have the most score
- 
+    vector<string> winners;
+
+    if ()
+    {
+        /* code */
+    }
+    
+
+
+
+
+
+
+
 
     cout << "Key is: " << key << endl;
     cout << "Key size is: " << n << endl;
