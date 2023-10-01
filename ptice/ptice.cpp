@@ -100,23 +100,7 @@ int main(){
     int goranScore = score;
 
 //check who have the most score
-    int scoreArray[3] = {adrainScore,brunoScore,goranScore};
-    int max = scoreArray[0];
-    for (int i = 0; i < 3; i++){
-        if (scoreArray[i > max]){
-            max = scoreArray[i];
-        }
-    }
-
-    string mostScore;
-
-    if (max == adrainScore){
-        mostScore = "Adrian";
-    }else if (max == brunoScore){
-        mostScore = "Bruno";
-    }else if (max == goranScore){
-        mostScore = "Goran";
-    }
+ 
 
     cout << "Key is: " << key << endl;
     cout << "Key size is: " << n << endl;
