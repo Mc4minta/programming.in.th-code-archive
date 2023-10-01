@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int main(){
@@ -100,22 +101,19 @@ int main(){
     int goranScore = score;
 
 //check who have the most score
-
-    int scoreArray[3] = {adrainScore,brunoScore,goranScore};
-    int max = scoreArray[0];
-    for (int i = 0; i < 3; i++){
-        if (scoreArray[i] > max){
-            max = scoreArray[i];
-        }
-    }
     
+    int maxScore = max(adrainScore, max(brunoScore, goranScore));
     
     vector<string> winners;
-    if (max == adrainScore){
+    if (adrainScore == maxScore){
         winners.push_back("Adrian");
-    }else if (max == brunoScore){
+    }
+    
+    if (brunoScore == maxScore){
         winners.push_back("Bruno");
-    }else if (max == goranScore){
+    }
+    
+    if (goranScore == maxScore){
         winners.push_back("Goran");
     }
     
@@ -130,12 +128,13 @@ int main(){
     cout << "Bruno score is: " << brunoScore << endl;
     cout << "Goran score is: " << goranScore << endl;
     cout << endl;
-    cout << "Max score is: " << max << endl;
+    cout << "Max score is: " << maxScore << endl;
     cout << "winner size is: " << winners.size() << endl;
     cout << "Winners is/are: " << endl;
     for (int i = 0; i < winners.size(); i++){
         cout << winners[i] << endl;
     }
+    
     
 
     return 0;
