@@ -64,27 +64,7 @@ int main(){
         cout << dic[letter] << " ";
     }
     
-
 //print num that match the dic;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     return 0;
 }
