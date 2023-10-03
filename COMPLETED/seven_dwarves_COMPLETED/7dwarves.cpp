@@ -40,7 +40,6 @@ int main(){
 
     findCombinations(num,combination,0,k,result);
 
-    
 
     for (const vector<int>& comb : result){
         for (int x : comb){
