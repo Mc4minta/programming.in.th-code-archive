@@ -57,7 +57,7 @@ void printStar(int row){
 			cout << endl; // end of row
 		}
 	}else{
-		// odd 
+		// odd
 		int space1 = row/2;
 		int space2 = 1;
 		// loop current for (row/2)+1
