@@ -2,17 +2,39 @@
 using namespace std;
 
 void printStar(int row){
-	int space,star;
 	if (row%2 == 0){
 		// even
-		space = (row/2) - 1;
-		for (int current=0; current<row/2; current++){
-			for (int i=0; i<space; i++){
+		int space1 = 1;
+		int star = 1;
+		int space2 = (row/2)-1;
+		for (int current=0; current<(row/2)-1; current++){
+			// print - for space1 times > then space--
+			for (int i=0; i<space1; i++){
 				cout << "-";
 			}
-			space--; // done printing --
+			space1--;
+			//print -* loop for star time >> then star++
+			for (int i=0; i<star; i++){
+				cout << "-*";
+			}
+			star++;
+			// print - for space time > then space --
+			for (int i=0; i<space2; i++){
+				cout << "-";
+			}
+			space2--;
+			// endl
+			cout << endl;
+		}
+		// print *-----* for two times
+		for (int current=0; current<2; current++){
+			cout << "*"; // print first *
+			for (int i=0; i<row-3; i++){
+				cout << "-"; // print ------
+			}
+			cout << "*"; // print last *
 			cout << endl; // end of row
-		}	
+		}
 	}else{
 		//odd
 		cout << "Num is odd";
