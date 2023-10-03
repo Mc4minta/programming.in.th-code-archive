@@ -61,7 +61,7 @@ void printStar(int row){
 		int space1 = row/2;
 		int space2 = 1;
 		// loop current for (row/2)+1
-		for (int current=0; current < (row/2); current++){
+		for (int current=0; current < (row/2)+1; current++){
 			// print - for space1 times
 			for (int i=0; i<space1; i++){
 				cout << "-";
