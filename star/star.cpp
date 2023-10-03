@@ -4,7 +4,7 @@ using namespace std;
 void printStar(int row){
 	if (row%2 == 0){
 		// even
-		int space1 = 1;
+		int space1 = (row/2)-2;
 		int star = 1;
 		int space2 = (row/2)-1;
 		for (int current=0; current<(row/2)-1; current++){
@@ -57,8 +57,37 @@ void printStar(int row){
 			cout << endl; // end of row
 		}
 	}else{
-		//odd 
-		cout << "Num is odd";
+		// odd 
+		int space1 = row/2;
+		int space2 = 1;
+		// loop current for (row/2)+1
+		for (int current=0; current < (row/2)+1; current++){
+			// print - for space1 times
+			for (int i=0; i<space1; i++){
+				cout << "-";
+			}
+			// print * one times
+			cout << "*";
+			// print - for space2 times >> then space++ (if current != 0)
+			if (current != 0){
+				for (int i=0; i<space2; i++){
+					cout << "-";
+				}
+				space2+=2;
+			}
+			// print * for one times ( if current row != 0)
+			if (current != 0){
+				cout << "*";
+			}
+			// print - for space3 times >> then space--;
+			for (int i=0; i<space1; i++){
+				cout << "-";
+			}
+			space1--;
+			cout << endl; // end of row
+		}
+		
+		
 	}
 }
 
