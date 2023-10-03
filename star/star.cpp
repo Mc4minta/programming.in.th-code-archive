@@ -61,7 +61,7 @@ void printStar(int row){
 		int space1 = row/2;
 		int space2 = 1;
 		// loop current for (row/2)+1
-		for (int current=0; current < (row/2)+1; current++){
+		for (int current=0; current < (row/2); current++){
 			// print - for space1 times
 			for (int i=0; i<space1; i++){
 				cout << "-";
@@ -91,7 +91,6 @@ void printStar(int row){
 		// loop current row/2
 		for (int current=0; current<row/2; current++){
 			//print - for space1 times
-			int realrow = current+1;
 			for (int i=0; i<space1; i++){
 				cout << "-";
 			}
@@ -103,7 +102,7 @@ void printStar(int row){
 			}
 			space2-=2;
 			//print * one time
-			if (current != realrow){
+			if (current != (row/2)-1){
 				cout << "*";
 			}
 			// print - for space1 times >> space1++; 
