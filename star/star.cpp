@@ -35,6 +35,27 @@ void printStar(int row){
 			cout << "*"; // print last *
 			cout << endl; // end of row
 		}
+		space1 = 0;
+		star = (row/2)-1;
+		space2 = 1;
+		for (int current=0; current<(row/2)-1; current++){
+			//print - for space1 times >> then space1--
+			for (int i=0; i<space1; i++){
+				cout << "-";
+			}
+			space1--;
+			// print -* for star times >> then star--
+			for (int i=0; i<star; i++){
+				cout << "-*";
+			}
+			star--;
+			// print - for space2 times >> then space2++
+			for (int i=0; i<space2; i++){
+				cout << "-";
+			}
+			space2++;
+			cout << endl; // end of row
+		}
 	}else{
 		//odd
 		cout << "Num is odd";
