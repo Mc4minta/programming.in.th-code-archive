@@ -3,6 +3,7 @@ using namespace std;
 
 int main(){
     int x,y;
+    cout << "enter x y: " << endl;
     cin >> x >> y;
     int times=0;
     int distance=0;
