@@ -1,0 +1,18 @@
+input a,b
+a = distance per jump
+b = distane from A to B 
+
+output c
+c = lowest number of jump
+
+-----------------------------
+start
+    input x,y
+    set times = 0
+    set distance = 0
+    while distance<=y
+        distance+=x
+        times++
+    endwhile    
+    output times
+stop
