@@ -1,0 +1,19 @@
+input a,b,c
+a b c = location of each kangaroos
+output most round that can be played
+
+num = {a,b,c}
+set x = 0
+
+while b-a != 0 or c-b != 0
+    if b-a != 0
+        a++ 
+        x++
+    if c-b != 0
+        c--
+        x++
+endwhile
+
+    output x
+
+
