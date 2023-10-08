@@ -13,18 +13,27 @@ bool vowel(string word,int index,char cv){
 	return vowel;
 }
 
-string check(string word,int n){
-	// editing
+string check(string word){
 	string ans;
-	int i,j;
-	char cv;
+	int n = word.length();
+	int i,j,cv;
+	int vw=0;
+	// process here // editing
 	for (i=0; i<n; i++){
-		if (word[i] == 'p' and vowel(word,i+1,cv)){ // p but not with vowel next
+		if (vowel(word,i,cv) && word[i+1] == 'p' && word[i+2] == cv){ // epe
+			ans.push_back(cv);
+		}else if(vowel(word,i,cv) && word[i-1] == 'p' && vowel(word,i+1,cv) == false){ // epl
+		    ans.push_back(cv);
+		}else if (word[i] == 'p'){
+			if(i==0 || word[i-1] == ' '){
+				ans.push_back(word[i]);
+			}else if (vowel(word,i-1,cv)){
+				if (vowel(word,i+1,cv) == false){
+					ans.push_back(word[i]);
+				}
+			}
+		}else{
 			ans.push_back(word[i]);
-		}else if (word[i] != 'p' and vowel(word,i,cv)){ // not p and vowel
-			ans.push_back(word[i]);
-		}else if (vowel(word,i,cv) and word[i+1] == 'p' and vowel(word,i+1,cv)){// is vowel p vowel
-		 	ans.push_back(cv);
 		}
 	}
 	return ans;
@@ -32,19 +41,15 @@ string check(string word,int n){
 
 int main(){
 	string word;
-	getline(cin,word);
-	int n = word.length();
-	string ans = check(word,n);
+	getline(cin, word, '\n');
+	string ans = check(word);
 	cout << ans;
-	return 0;
 }
 
-// input
+
+// test case 1
 // zepelepenapa papapripikapa
-// output
 // zelena paprika
 
-// input
-// bapas jepe doposapadnapa opovapa kepemipijapa
-// output
+// test case
 // bas je dosadna ova kemija
