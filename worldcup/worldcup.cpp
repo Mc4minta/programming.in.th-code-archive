@@ -2,6 +2,15 @@
 using namespace std;
 
 int main(){
-    string a[4];
-    for (int i=0; i<4; i++) cin >> a[i];
+    int n=4;
+    string a[n];
+    for (int i=0; i<n; i++) cin >> a[i];
+    int i,j;
+    int goal[n][n];
+    for (i=0; i<n; i++){
+        for (j=0; j<n; j++){
+            
+        }
+    }
+    int score[4];
 }
