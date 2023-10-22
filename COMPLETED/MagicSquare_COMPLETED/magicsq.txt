@@ -1,0 +1,1 @@
+handle the case that the number is not unique because this is a magic square call normal magic square

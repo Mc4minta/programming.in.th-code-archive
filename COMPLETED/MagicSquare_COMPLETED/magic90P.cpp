@@ -9,8 +9,12 @@ int main(){
     for (int i=0; i<n; i++){
         for (int j=0; j<n; j++){
             cin >> num[i][j];
+            if (num[i][j] > (n*n)){
+                cout << "No"; return 0;
+            }
         }
     }
+
 
     bool yes = true;
     int row,col; int sum=0;
@@ -41,7 +45,15 @@ int main(){
     for (int i=0; i<n; i++){
         temp+=num[i][i];
     }
+    if (temp != sum){
+        cout << "No"; return 0;
+    }
 
+    temp=0; int a=n-1;
+    for (int i=0; i<n; i++){
+        temp+=num[i][a];
+        a--;
+    }
     if (temp != sum){
         cout << "No"; return 0;
     }
