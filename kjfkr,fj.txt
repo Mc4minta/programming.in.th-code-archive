@@ -1,0 +1,15 @@
+START
+forever
+	int x
+	if key ... press
+	x = ระยะที่จะ move
+	if (not touhing green)
+		move x step
+	If cat touching object bear (mm)
+		think this is my mm
+		wait 1 sec
+		go to position center
+		break (end program)
+	else
+		think not mm
+END	
